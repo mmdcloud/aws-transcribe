@@ -1,0 +1,16 @@
+{
+  "Records": [
+    {
+      "messageId": "msg-001-test-uuid",
+      "receiptHandle": "AQEBwJnKyrHigUMZj6r...",
+      "body": "{\"Records\":[{\"eventVersion\":\"2.1\",\"eventSource\":\"aws:s3\",\"awsRegion\":\"us-east-1\",\"eventTime\":\"2026-11-05T12:00:00.000Z\",\"eventName\":\"ObjectCreated:Put\",\"s3\":{\"s3SchemaVersion\":\"1.0\",\"bucket\":{\"name\":\"call-analytics-raw-audio-123456789012\",\"arn\":\"arn:aws:s3:::call-analytics-raw-audio-123456789012\"},\"object\":{\"key\":\"recordings/2026/11/05/call_customer_support_01.mp3\",\"size\":2048000,\"eTag\":\"d41d8cd98f00b204e9800998ecf8427e\"}}}]}",
+      "attributes": {
+        "ApproximateReceiveCount": "1",
+        "SentTimestamp": "1709251200000"
+      },
+      "eventSource": "aws:sqs",
+      "awsRegion": "us-east-1"
+    }
+  ]
+}
+

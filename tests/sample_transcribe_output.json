@@ -1,0 +1,82 @@
+{
+  "jobName": "call_1730808000_call_customer_support_01_a1b2c3d4e5f6",
+  "accountId": "123456789012",
+  "status": "COMPLETED",
+  "results": {
+    "transcripts": [
+      {
+        "transcript": "Hello, thank you for calling Acme Support. My name is Alex. How can I help you today? Hi Alex, I noticed an unexpected charge of 45 dollars on my monthly statement and would like clarification. Let me look up your account. I see the charge was for an add-on service. Since you did not activate it, I have issued a full refund of 45 dollars back to your card. Thank you so much, Alex! That was very helpful."
+      }
+    ],
+    "speaker_labels": {
+      "speakers": 2,
+      "segments": [
+        {
+          "start_time": "0.0",
+          "end_time": "5.2",
+          "speaker_label": "spk_0",
+          "items": [
+            { "start_time": "0.0", "end_time": "0.5", "speaker_label": "spk_0" },
+            { "start_time": "0.6", "end_time": "0.9", "speaker_label": "spk_0" },
+            { "start_time": "1.0", "end_time": "1.2", "speaker_label": "spk_0" },
+            { "start_time": "1.3", "end_time": "1.8", "speaker_label": "spk_0" },
+            { "start_time": "1.9", "end_time": "2.4", "speaker_label": "spk_0" },
+            { "start_time": "2.5", "end_time": "3.1", "speaker_label": "spk_0" },
+            { "start_time": "3.2", "end_time": "3.5", "speaker_label": "spk_0" },
+            { "start_time": "3.6", "end_time": "3.9", "speaker_label": "spk_0" },
+            { "start_time": "4.0", "end_time": "4.3", "speaker_label": "spk_0" },
+            { "start_time": "4.4", "end_time": "4.7", "speaker_label": "spk_0" },
+            { "start_time": "4.8", "end_time": "5.1", "speaker_label": "spk_0" },
+            { "start_time": "5.1", "end_time": "5.2", "speaker_label": "spk_0" }
+          ]
+        },
+        {
+          "start_time": "5.5",
+          "end_time": "11.0",
+          "speaker_label": "spk_1",
+          "items": [
+            { "start_time": "5.5", "end_time": "5.8", "speaker_label": "spk_1" },
+            { "start_time": "5.9", "end_time": "6.3", "speaker_label": "spk_1" },
+            { "start_time": "6.4", "end_time": "6.7", "speaker_label": "spk_1" },
+            { "start_time": "6.8", "end_time": "7.3", "speaker_label": "spk_1" },
+            { "start_time": "7.4", "end_time": "7.8", "speaker_label": "spk_1" },
+            { "start_time": "7.9", "end_time": "8.1", "speaker_label": "spk_1" },
+            { "start_time": "8.2", "end_time": "8.5", "speaker_label": "spk_1" },
+            { "start_time": "8.6", "end_time": "9.1", "speaker_label": "spk_1" },
+            { "start_time": "9.2", "end_time": "9.4", "speaker_label": "spk_1" },
+            { "start_time": "9.5", "end_time": "9.8", "speaker_label": "spk_1" },
+            { "start_time": "9.9", "end_time": "10.3", "speaker_label": "spk_1" },
+            { "start_time": "10.4", "end_time": "10.9", "speaker_label": "spk_1" }
+          ]
+        }
+      ]
+    },
+    "items": [
+      { "start_time": "0.0", "end_time": "0.5", "type": "pronunciation", "alternatives": [{ "content": "Hello,", "confidence": "0.99" }] },
+      { "start_time": "0.6", "end_time": "0.9", "type": "pronunciation", "alternatives": [{ "content": "thank", "confidence": "0.99" }] },
+      { "start_time": "1.0", "end_time": "1.2", "type": "pronunciation", "alternatives": [{ "content": "you", "confidence": "0.99" }] },
+      { "start_time": "1.3", "end_time": "1.8", "type": "pronunciation", "alternatives": [{ "content": "for", "confidence": "0.99" }] },
+      { "start_time": "1.9", "end_time": "2.4", "type": "pronunciation", "alternatives": [{ "content": "calling", "confidence": "0.99" }] },
+      { "start_time": "2.5", "end_time": "3.1", "type": "pronunciation", "alternatives": [{ "content": "Acme", "confidence": "0.99" }] },
+      { "start_time": "3.2", "end_time": "3.5", "type": "pronunciation", "alternatives": [{ "content": "Support.", "confidence": "0.99" }] },
+      { "start_time": "3.6", "end_time": "3.9", "type": "pronunciation", "alternatives": [{ "content": "My", "confidence": "0.99" }] },
+      { "start_time": "4.0", "end_time": "4.3", "type": "pronunciation", "alternatives": [{ "content": "name", "confidence": "0.99" }] },
+      { "start_time": "4.4", "end_time": "4.7", "type": "pronunciation", "alternatives": [{ "content": "is", "confidence": "0.99" }] },
+      { "start_time": "4.8", "end_time": "5.1", "type": "pronunciation", "alternatives": [{ "content": "Alex.", "confidence": "0.99" }] },
+      { "start_time": "5.1", "end_time": "5.2", "type": "pronunciation", "alternatives": [{ "content": "How", "confidence": "0.99" }] },
+      { "start_time": "5.5", "end_time": "5.8", "type": "pronunciation", "alternatives": [{ "content": "Hi", "confidence": "0.99" }] },
+      { "start_time": "5.9", "end_time": "6.3", "type": "pronunciation", "alternatives": [{ "content": "Alex,", "confidence": "0.99" }] },
+      { "start_time": "6.4", "end_time": "6.7", "type": "pronunciation", "alternatives": [{ "content": "I", "confidence": "0.99" }] },
+      { "start_time": "6.8", "end_time": "7.3", "type": "pronunciation", "alternatives": [{ "content": "noticed", "confidence": "0.99" }] },
+      { "start_time": "7.4", "end_time": "7.8", "type": "pronunciation", "alternatives": [{ "content": "an", "confidence": "0.99" }] },
+      { "start_time": "7.9", "end_time": "8.1", "type": "pronunciation", "alternatives": [{ "content": "unexpected", "confidence": "0.99" }] },
+      { "start_time": "8.2", "end_time": "8.5", "type": "pronunciation", "alternatives": [{ "content": "charge", "confidence": "0.99" }] },
+      { "start_time": "8.6", "end_time": "9.1", "type": "pronunciation", "alternatives": [{ "content": "of", "confidence": "0.99" }] },
+      { "start_time": "9.2", "end_time": "9.4", "type": "pronunciation", "alternatives": [{ "content": "45", "confidence": "0.99" }] },
+      { "start_time": "9.5", "end_time": "9.8", "type": "pronunciation", "alternatives": [{ "content": "dollars", "confidence": "0.99" }] },
+      { "start_time": "9.9", "end_time": "10.3", "type": "pronunciation", "alternatives": [{ "content": "on", "confidence": "0.99" }] },
+      { "start_time": "10.4", "end_time": "10.9", "type": "pronunciation", "alternatives": [{ "content": "my", "confidence": "0.99" }] }
+    ]
+  }
+}
+

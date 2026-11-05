@@ -1,0 +1,16 @@
+{
+  "Records": [
+    {
+      "messageId": "msg-002-test-uuid",
+      "receiptHandle": "AQEBwJnKyrHigUMZj6r...",
+      "body": "{\"version\":\"0\",\"id\":\"c1e2b4f9-2e1d-4f1e-b85f-829d81d6f43e\",\"detail-type\":\"Transcribe Job State Change\",\"source\":\"aws.transcribe\",\"account\":\"123456789012\",\"time\":\"2026-11-05T12:05:00Z\",\"region\":\"us-east-1\",\"resources\":[],\"detail\":{\"TranscriptionJobName\":\"call_1730808000_call_customer_support_01_a1b2c3d4e5f6\",\"TranscriptionJobStatus\":\"COMPLETED\"}}",
+      "attributes": {
+        "ApproximateReceiveCount": "1",
+        "SentTimestamp": "1709251500000"
+      },
+      "eventSource": "aws:sqs",
+      "awsRegion": "us-east-1"
+    }
+  ]
+}
+
