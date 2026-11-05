@@ -119,22 +119,23 @@ flowchart TD
 
 ```
 aws-transcribe/
-├── versions.tf                         # Terraform & provider constraints (AWS, Archive, Random)
-├── variables.tf                        # Fully typed input variables with validations
-├── main.tf                             # Provider configurations, local helpers, tags
-├── kms.tf                              # KMS Customer Managed Key (CMK) & multi-service key policy
-├── s3.tf                               # Raw Audio & Transcripts S3 buckets + lifecycle + notifications
-├── sqs.tf                              # Ingestion & Processing SQS queues + DLQs + redrive policies
-├── eventbridge.tf                      # EventBridge rule for Transcribe state change + SQS target
-├── dynamodb.tf                         # DynamoDB table (PITR, TTL, StatusIndex, SentimentIndex)
-├── iam.tf                              # Least-privilege IAM roles for Lambdas & Transcribe
-├── lambda.tf                           # Lambda functions, archive packaging, event source mappings
-├── monitoring.tf                       # CloudWatch Log Groups, Metric Alarms, Dashboard, SNS Alerts
-├── outputs.tf                          # Key resource identifiers, ARNs, URLs
-├── terraform.tfvars.example            # Sample environment variables
+├── terraform/                          # Root Terraform working directory
+│   ├── main.tf                         # Module orchestration & deterministic ARN bindings
+│   ├── variables.tf                    # Root typed variables with validations
+│   ├── outputs.tf                      # Root output exports from modules
+│   ├── provider.tf                     # Provider declarations (AWS, Archive, Random)
+│   ├── terraform.tfvars.example        # Environment variable templates
+│   └── modules/                        # Production-grade decoupled modules
+│       ├── kms/                        # Multi-service KMS Customer Managed Key (CMK)
+│       ├── s3/                         # Raw & Transcripts buckets, versioning, TLS policy
+│       ├── sqs/                        # Ingestion & Processing SQS queues + DLQs
+│       ├── dynamodb/                   # Metadata & analytics table, GSIs, PITR, TTL
+│       ├── lambda/                     # Dispatcher & Processor Lambdas, IAM roles & mappings
+│       ├── eventbridge/                # Transcribe state change event rule & target
+│       └── monitoring/                 # CloudWatch log groups, metric alarms & dashboard
 ├── src/
 │   ├── dispatcher/
-│   │   ├── handler.py                  # S3/SQS event parser & Transcribe diarization job launcher
+│   │   ├── handler.py                  # S3/SQS event parser & Transcribe diarization launcher
 │   │   └── requirements.txt
 │   └── processor/
 │       ├── handler.py                  # Diarization parser, Bedrock Converse GenAI & DynamoDB writer
@@ -157,6 +158,7 @@ aws-transcribe/
 
 ### Step 1: Clone & Configure
 ```bash
+cd terraform
 cp terraform.tfvars.example terraform.tfvars
 ```
 
