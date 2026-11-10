@@ -4,7 +4,7 @@
 
 resource "aws_s3_bucket" "raw_audio" {
   bucket        = var.raw_bucket_name
-  force_destroy = var.environment != "production"
+  force_destroy = var.force_destroy
 
   tags = merge(
     var.tags,
@@ -120,7 +120,7 @@ resource "aws_s3_bucket_notification" "raw_audio_notification" {
 
 resource "aws_s3_bucket" "transcripts" {
   bucket        = var.transcripts_bucket_name
-  force_destroy = var.environment != "production"
+  force_destroy = var.force_destroy
 
   tags = merge(
     var.tags,

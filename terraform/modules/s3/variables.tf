@@ -13,6 +13,12 @@ variable "environment" {
   description = "Deployment environment name."
 }
 
+variable "force_destroy" {
+  type        = bool
+  description = "Whether to force destroy the bucket or not"
+  default = true
+}
+
 variable "kms_key_arn" {
   type        = string
   description = "ARN of KMS CMK for S3 bucket encryption (null for AES256)."
