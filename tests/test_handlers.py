@@ -19,7 +19,7 @@ sys.modules["botocore.exceptions"] = mock.MagicMock()
 os.environ["TRANSCRIPTS_BUCKET"] = "test-transcripts-bucket"
 os.environ["TRANSCRIBE_ROLE_ARN"] = "arn:aws:iam::123456789012:role/test-role"
 os.environ["DYNAMODB_TABLE_NAME"] = "test-table"
-os.environ["BEDROCK_MODEL_ID"] = "anthropic.claude-3-haiku-20240307-v1:0"
+os.environ["BEDROCK_MODEL_ID"] = "amazon.nova-micro-v1"
 
 from src.dispatcher.handler import sanitize_job_name, ALLOWED_EXTENSIONS
 from src.processor.handler import parse_transcribe_output, float_to_decimal

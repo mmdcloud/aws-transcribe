@@ -22,11 +22,12 @@ transcribe_enable_language_id = false
 transcribe_max_speakers       = 5
 
 # Amazon Bedrock Foundation Model
-# Supported examples:
-# - "anthropic.claude-3-haiku-20240307-v1:0" (fast, cost-effective, high quality)
-# - "anthropic.claude-3-5-sonnet-20240620-v1:0" (in-depth reasoning, complex QA)
-# - "amazon.nova-micro-v1:0"
-bedrock_model_id    = "anthropic.claude-3-haiku-20240307-v1:0"
+# AWS Bedrock requires cross-region inference profile IDs for Claude models:
+# - "amazon.nova-micro-v1" (fast, cost-effective, high quality)
+# - "us.anthropic.claude-3-5-haiku-20241022-v1:0" (latest Haiku generation)
+# - "us.anthropic.claude-3-5-sonnet-20241022-v2:0" (in-depth reasoning, complex QA)
+# - "amazon.nova-micro-v1:0" (ultra-fast AWS multimodal model)
+bedrock_model_id    = "amazon.nova-micro-v1"
 bedrock_max_tokens  = 2048
 bedrock_temperature = 0.1
 

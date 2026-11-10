@@ -96,7 +96,7 @@ variable "transcribe_max_speakers" {
 variable "bedrock_model_id" {
   type        = string
   description = "Amazon Bedrock Foundation Model ID or inference profile for analytics and summarization."
-  default     = "anthropic.claude-3-haiku-20240307-v1:0"
+  default     = "amazon.nova-micro-v1"
 }
 
 variable "bedrock_max_tokens" {

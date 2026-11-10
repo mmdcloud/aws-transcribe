@@ -275,7 +275,7 @@ resource "aws_iam_policy" "processor_lambda_policy" {
           ]
           Resource = [
             "arn:aws:bedrock:*::foundation-model/*",
-            "arn:aws:bedrock:${var.region}:${var.account_id}:inference-profile/*"
+            "arn:aws:bedrock:*:*:inference-profile/*"
           ]
         },
         {

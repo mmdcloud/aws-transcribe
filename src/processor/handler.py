@@ -29,7 +29,7 @@ transcribe_client = boto3.client("transcribe")
 TRANSCRIPTS_BUCKET = os.environ.get("TRANSCRIPTS_BUCKET", "")
 DYNAMODB_TABLE_NAME = os.environ.get("DYNAMODB_TABLE_NAME", "")
 BEDROCK_MODEL_ID = os.environ.get(
-    "BEDROCK_MODEL_ID", "anthropic.claude-3-haiku-20240307-v1:0"
+    "BEDROCK_MODEL_ID", "amazon.nova-micro-v1"
 )
 BEDROCK_MAX_TOKENS = int(os.environ.get("BEDROCK_MAX_TOKENS", "2048"))
 BEDROCK_TEMPERATURE = float(os.environ.get("BEDROCK_TEMPERATURE", "0.1"))
@@ -275,7 +275,8 @@ def process_completed_transcription(
             TranscriptionJobName=job_name
         )
         job_details = job_desc.get("TranscriptionJob", {})
-        raw_audio_uri = job_details.get("Media", {}).get("MediaFileUri", "")
+        raw_audio_val = job_details.get("Media", {}).get("MediaFileUri", "")
+        raw_audio_uri = str(raw_audio_val) if raw_audio_val else ""
     except Exception as ex:
         logger.warning(
             "Could not fetch full Transcribe job description for %s: %s",

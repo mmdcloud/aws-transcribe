@@ -154,7 +154,7 @@ aws-transcribe/
 ### Prerequisites
 - [Terraform](https://www.terraform.io/downloads.html) >= 1.5.0
 - [AWS CLI v2](https://aws.amazon.com/cli/) configured with appropriate administrative credentials
-- Access to Amazon Bedrock foundation models (ensure `anthropic.claude-3-haiku-20240307-v1:0` or your chosen model is enabled in your AWS Bedrock Model Access console)
+- Access to Amazon Bedrock foundation models (ensure `amazon.nova-micro-v1` or your chosen model is enabled in your AWS Bedrock Model Access console)
 
 ### Step 1: Clone & Configure
 ```bash
@@ -167,7 +167,7 @@ Edit `terraform.tfvars` with your target settings:
 aws_region          = "us-east-1"
 environment         = "production"
 project_name        = "call-analytics"
-bedrock_model_id    = "anthropic.claude-3-haiku-20240307-v1:0"
+bedrock_model_id    = "amazon.nova-micro-v1"
 transcribe_max_speakers = 5
 alarm_email_endpoints = ["ops-alerts@yourcompany.com"]
 ```
