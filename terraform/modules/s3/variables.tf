@@ -16,7 +16,7 @@ variable "environment" {
 variable "force_destroy" {
   type        = bool
   description = "Whether to force destroy the bucket or not"
-  default = true
+  default     = true
 }
 
 variable "kms_key_arn" {

@@ -25,11 +25,25 @@ dynamodb_resource = boto3.resource("dynamodb")
 bedrock_runtime = boto3.client("bedrock-runtime")
 transcribe_client = boto3.client("transcribe")
 
+def normalize_model_id(model_id: str) -> str:
+    """Normalizes Bedrock model IDs to ensure valid version tags and inference profiles."""
+    cleaned = model_id.strip()
+    # Amazon Nova models require the version suffix :0 (e.g. amazon.nova-micro-v1:0)
+    if (cleaned.startswith("amazon.nova-") or cleaned.startswith("us.amazon.nova-")) and not re.search(r":\d+$", cleaned):
+        cleaned = f"{cleaned}:0"
+    # Legacy Anthropic models require US cross-region inference profile prefix
+    if cleaned == "anthropic.claude-3-haiku-20240307-v1:0":
+        cleaned = "us.anthropic.claude-3-haiku-20240307-v1:0"
+    elif cleaned == "anthropic.claude-3-5-haiku-20241022-v1:0":
+        cleaned = "us.anthropic.claude-3-5-haiku-20241022-v1:0"
+    return cleaned
+
+
 # Configuration from Environment Variables
 TRANSCRIPTS_BUCKET = os.environ.get("TRANSCRIPTS_BUCKET", "")
 DYNAMODB_TABLE_NAME = os.environ.get("DYNAMODB_TABLE_NAME", "")
-BEDROCK_MODEL_ID = os.environ.get(
-    "BEDROCK_MODEL_ID", "amazon.nova-micro-v1"
+BEDROCK_MODEL_ID = normalize_model_id(
+    os.environ.get("BEDROCK_MODEL_ID", "amazon.nova-micro-v1:0")
 )
 BEDROCK_MAX_TOKENS = int(os.environ.get("BEDROCK_MAX_TOKENS", "2048"))
 BEDROCK_TEMPERATURE = float(os.environ.get("BEDROCK_TEMPERATURE", "0.1"))

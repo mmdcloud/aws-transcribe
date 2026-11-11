@@ -114,7 +114,7 @@ variable "transcribe_max_speakers" {
 variable "bedrock_model_id" {
   type        = string
   description = "Bedrock foundation model ID or inference profile."
-  default     = "amazon.nova-micro-v1"
+  default     = "amazon.nova-micro-v1:0"
 }
 
 variable "bedrock_max_tokens" {
